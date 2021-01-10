@@ -1,0 +1,30 @@
+/**
+ * Main App Styles
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Playfair+Display:ital@0;1&display=swap');
+ @import "~bootstrap/scss/bootstrap";
+
+ body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Amatic SC', cursive;
+}
+
+h5 {
+    display: inline;
+}
+
+ .mt-5, .my-5 {
+    margin-top: 10rem !important;
+}
+
+.navbar-light .navbar-toggler {
+    border: none !important;
+}
