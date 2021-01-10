@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Button } from 'react-bootstrap'
 import logobig from '../assets/images/logo.svg'
 
@@ -17,7 +18,7 @@ export const Landing = () => {
                     <h1>Shoot n'share</h1>
                     <p>The better way for modern photographers to share images with clients.
 					</p>
-                    <Button variant="info" size='lg'>Get started</Button>
+                    <Link to="/sign-up"><Button variant="info" size='lg'>Get started</Button></Link>
                 </div>
             </div>
         </div>

@@ -21,8 +21,6 @@ const App = () => {
 				height: '100vh'
 			}}>
 				<Navigation />
-
-
 				<Container>
 					<Routes>
 						<Route path="/">
@@ -37,9 +35,7 @@ const App = () => {
 						<Route path="/sign-up">
 							<SignUp />
 						</Route>
-
 					</Routes>
-
 				</Container>
 			</div>
 		</>

@@ -28,3 +28,44 @@ h5 {
 .navbar-light .navbar-toggler {
     border: none !important;
 }
+
+.log-box {
+    
+    margin: auto;
+    transition: all .3s;
+
+    @media screen and (min-width: 600px) {
+        width: 450px;
+    }
+
+    
+}
+
+.form-control:focus {
+    border-color: #167bff;
+    box-shadow: none;
+}
+
+.log-box h3 {
+    text-align: center;
+    margin: 0;
+    line-height: 1;
+    padding-bottom: 20px;
+}
+  
+.custom-control-label {
+    font-weight: 400;
+}
+  
+.forgot-password,
+.forgot-password a {
+    text-align: right;
+    font-size: 13px;
+    padding-top: 10px;
+    color: #080808;
+    margin: 0;
+}
+  
+.forgot-password a {
+    color: #167bff;
+}
