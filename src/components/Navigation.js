@@ -7,7 +7,7 @@ export const Navigation = () => {
         <div>
             <Navbar collapseOnSelect expand="lg" bg="transparent" variant="light">
                 <Container>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand href="/">
                         <img
                             alt="logo"
                             src={logo}
