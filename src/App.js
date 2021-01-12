@@ -1,11 +1,14 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import { Routes, Route } from 'react-router-dom'
+import AuthProvider from './contexts/AuthContext'
+import AuthRoute from './components/AuthRoute'
 import Navigation from './components/Navigation'
 import Landing from './components/Landing'
-import SignUp from './components/Signup'
-import LogIn from './components/Login'
-import LogOut from './components/Logout'
+import Signup from './components/Signup'
+import Login from './components/Login'
+import Logout from './components/Logout'
+import Home from './components/Home'
 import background from './assets/images/bg-home.jpg'
 import './assets/scss/app.scss'
 
@@ -20,23 +23,30 @@ const App = () => {
 				backgroundRepeat: 'no-repeat',
 				height: '100vh'
 			}}>
-				<Navigation />
-				<Container>
-					<Routes>
-						<Route path="/">
-							<Landing />
-						</Route>
-						<Route path="/logout">
-							<LogOut />
-						</Route>
-						<Route path="/login">
-							<LogIn />
-						</Route>
-						<Route path="/sign-up">
-							<SignUp />
-						</Route>
-					</Routes>
-				</Container>
+				<AuthProvider>
+					<Navigation />
+					<Container>
+
+						<Routes>
+							<Route path="/">
+								<Landing />
+							</Route>
+							<AuthRoute path="/home">
+								<Home />
+							</AuthRoute>
+							<Route path="/logout">
+								<Logout />
+							</Route>
+							<Route path="/login">
+								<Login />
+							</Route>
+							<Route path="/sign-up">
+								<Signup />
+							</Route>
+						</Routes>
+
+					</Container>
+				</AuthProvider>
 			</div>
 		</>
 	)
