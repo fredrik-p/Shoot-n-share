@@ -32,7 +32,7 @@ const ImagesGrid = ({ images }) => {
                                 </Card.Text>
                                 {
                                     currentUser.uid === image.owner && (
-                                        <Button variant="danger" size="sm" onClick={() => {
+                                        <Button className="delbtn" variant="danger" size="sm" onClick={() => {
                                             handleDeleteImage(image)
                                         }}>
                                             <VscTrash />

@@ -68,7 +68,7 @@ const ReviewAlbum = () => {
     }
 
     const handleSendReview = async () => {
-        const title = `${album.title} - ${moment().format("MMMM Do YYYY, h:mm:ss a")}`;
+        const title = `${album.title} - Reviewed on ${moment().format("MMMM Do YYYY")}`;
 
         setError(false);
 
@@ -166,7 +166,7 @@ const ReviewAlbum = () => {
                 <Button
                     disabled={disabledBtn}
                     variant="dark"
-                    className="mr-3"
+                    className="mt-3 mb-3"
                     onClick={handleSendReview}>
                     Send Review
                             </Button>

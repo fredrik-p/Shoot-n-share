@@ -15,7 +15,6 @@ import ReviewAlbum from './components/albums/ReviewAlbum'
 import Thanks from './components/Thanks'
 import CreateAlbum from './components/albums/CreateAlbum'
 import SimpleReactLightbox from 'simple-react-lightbox'
-import background from './assets/images/bg-home.jpg'
 import './assets/scss/app.scss'
 
 const App = () => {

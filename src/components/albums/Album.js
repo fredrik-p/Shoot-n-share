@@ -21,12 +21,8 @@ const Album = () => {
                 <h3>{album && album.title}</h3>
             </div>
 
-            <UploadAlbumImage albumId={albumId} />
 
-            {loading
-                ? (<p>Just a moment..</p>)
-                : (<ImagesGrid images={images} />)
-            }
+            <UploadAlbumImage albumId={albumId} />
 
             <div className="create-link-btn">
                 <Button variant="dark" onClick={() => { handleCreateReviewLink(albumId) }}>Create review link for client</Button>
@@ -39,10 +35,14 @@ const Album = () => {
                         <p>Review link: <a href={reviewLink}>{reviewLink}</a></p>
 
                     </div>
-
-
                 )
             }
+
+            {loading
+                ? (<p>Just a moment..</p>)
+                : (<ImagesGrid images={images} />)
+            }
+
         </>
     )
 }

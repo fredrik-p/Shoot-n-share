@@ -11,18 +11,16 @@ const Albums = () => {
     return (
         <>
             <h2 className="mb-3">All Albums</h2>
-
+            {currentUser && (
+                <div className="mt-3 centered">
+                    <Link to="/albums/create" className="btn btn-dark btn-md mb-3">Create a new Album</Link>
+                </div>
+            )}
             {
                 loading && currentUser
                     ? (<p>Just a second..</p>)
                     : (<AlbumsGrid albums={albums} />)
             }
-
-            {currentUser && (
-                <div className="mt-3">
-                    <Link to="/albums/create" className="btn btn-dark btn-md">Create a new Album</Link>
-                </div>
-            )}
         </>
     )
 }
