@@ -21,62 +21,49 @@ import './assets/scss/app.scss'
 const App = () => {
 	return (
 		<>
-
-			<div style={{
-				backgroundImage: `url(${background})`,
-				backgroundSize: 'cover',
-				backgroundPosition: 'center center',
-				backgroundRepeat: 'no-repeat',
-				backgroundAttachment: 'fixed',
-				height: '100vh',
-				width: '100vw',
-
-			}}>
-				<AuthProvider>
-					<SimpleReactLightbox>
-						<Navigation />
-						<Container>
-
-							<Routes>
-								<Route path="/">
-									<Landing />
-								</Route>
-								<Route path="/login">
-									<Login />
-								</Route>
-								<Route path="/sign-up">
-									<Signup />
-								</Route>
-								<Route path="/review/:albumId">
-									<ReviewAlbum />
-								</Route>
-								<Route path="/review/thanks">
-									<Thanks />
-								</Route>
-								<AuthRoute path="/home">
-									<Home />
+			<AuthProvider>
+				<SimpleReactLightbox>
+					<Navigation />
+					<Container>
+						<Routes>
+							<Route path="/">
+								<Landing />
+							</Route>
+							<Route path="/login">
+								<Login />
+							</Route>
+							<Route path="/sign-up">
+								<Signup />
+							</Route>
+							<Route path="/review/:albumId">
+								<ReviewAlbum />
+							</Route>
+							<Route path="/review/thanks">
+								<Thanks />
+							</Route>
+							<AuthRoute path="/home">
+								<Home />
+							</AuthRoute>
+							<Route path="/albums">
+								<AuthRoute path="/">
+									<Albums />
 								</AuthRoute>
-								<Route path="/albums">
-									<AuthRoute path="/">
-										<Albums />
-									</AuthRoute>
 
-									<AuthRoute path="/create">
-										<CreateAlbum />
-									</AuthRoute>
+								<AuthRoute path="/create">
+									<CreateAlbum />
+								</AuthRoute>
 
-									<AuthRoute path="/:albumId">
-										<Album />
-									</AuthRoute>
-								</Route>
+								<AuthRoute path="/:albumId">
+									<Album />
+								</AuthRoute>
+							</Route>
 
-								<Route path="*" element={<NotFound />} />
-							</Routes>
+							<Route path="*" element={<NotFound />} />
+						</Routes>
 
-						</Container>
-					</SimpleReactLightbox>
-				</AuthProvider>
-			</div>
+					</Container>
+				</SimpleReactLightbox>
+			</AuthProvider>
 		</>
 	)
 }

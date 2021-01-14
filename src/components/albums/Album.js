@@ -4,7 +4,6 @@ import ImagesGrid from './ImagesGrid'
 import useAlbum from '../../hooks/useAlbum'
 import UploadAlbumImage from './UploadAlbumImage'
 import { Button } from 'react-bootstrap'
-import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const Album = () => {
     const { albumId } = useParams()

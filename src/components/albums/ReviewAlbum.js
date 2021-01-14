@@ -101,8 +101,8 @@ const ReviewAlbum = () => {
             card.getElementsByClassName('thumbsup')[0].classList.add('thumbsup-active');
             card.getElementsByClassName('thumbsdown')[0].classList.remove('thumbsdown-active');
         } else if (reaction === false) {
-            card.getElementsByClassName('thumbsup')[0].classList.add('thumbsdown-active');
-            card.getElementsByClassName('thumbsdown')[0].classList.remove('thumbsup-active');
+            card.getElementsByClassName('thumbsdown')[0].classList.add('thumbsdown-active');
+            card.getElementsByClassName('thumbsup')[0].classList.remove('thumbsup-active');
         }
     }
 
