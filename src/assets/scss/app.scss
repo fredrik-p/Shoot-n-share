@@ -7,6 +7,7 @@
 
  body {
     margin: 0;
+    height: auto;
     font-family: 'Playfair Display', serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -108,4 +109,33 @@ background-color: rgba(255, 255, 255, 0.5);
 .card-title a:hover { 
     color: #080808;
     text-decoration: none;
+}
+
+.create-link-btn {
+    text-align: center;
+}
+.client-link {
+   
+    justify-content: center;
+    display: inline-flex; 
+    align-items: center;
+    float: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0.25rem;
+    & p {
+        
+        margin: 10px;
+    }
+}
+
+.thumbsup,
+.thumbsdown {
+    color: #080808;
+}
+.thumbsdown-active {
+    color: rgb(141, 43, 43);
+}
+
+.thumbsup-active {
+ color: rgb(50, 110, 50);
 }

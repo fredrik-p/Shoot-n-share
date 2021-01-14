@@ -6,14 +6,14 @@ import AlbumsGrid from './AlbumsGrid'
 
 const Albums = () => {
     const { currentUser } = useAuth()
-    const { albums, loading } = useAlbums()
+    const { albums, loading } = useAlbums(currentUser.uid)
 
     return (
         <>
             <h2 className="mb-3">All Albums</h2>
 
             {
-                loading
+                loading && currentUser
                     ? (<p>Just a second..</p>)
                     : (<AlbumsGrid albums={albums} />)
             }

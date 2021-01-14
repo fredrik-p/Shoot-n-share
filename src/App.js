@@ -11,6 +11,8 @@ import Home from './components/Home'
 import NotFound from './components/NotFound'
 import Album from './components/albums/Album'
 import Albums from './components/albums/Albums'
+import ReviewAlbum from './components/albums/ReviewAlbum'
+import Thanks from './components/Thanks'
 import CreateAlbum from './components/albums/CreateAlbum'
 import SimpleReactLightbox from 'simple-react-lightbox'
 import background from './assets/images/bg-home.jpg'
@@ -25,7 +27,10 @@ const App = () => {
 				backgroundSize: 'cover',
 				backgroundPosition: 'center center',
 				backgroundRepeat: 'no-repeat',
-				height: '100vh'
+				backgroundAttachment: 'fixed',
+				height: '100vh',
+				width: '100vw',
+
 			}}>
 				<AuthProvider>
 					<SimpleReactLightbox>
@@ -35,6 +40,18 @@ const App = () => {
 							<Routes>
 								<Route path="/">
 									<Landing />
+								</Route>
+								<Route path="/login">
+									<Login />
+								</Route>
+								<Route path="/sign-up">
+									<Signup />
+								</Route>
+								<Route path="/review/:albumId">
+									<ReviewAlbum />
+								</Route>
+								<Route path="/review/thanks">
+									<Thanks />
 								</Route>
 								<AuthRoute path="/home">
 									<Home />
@@ -51,12 +68,6 @@ const App = () => {
 									<AuthRoute path="/:albumId">
 										<Album />
 									</AuthRoute>
-								</Route>
-								<Route path="/login">
-									<Login />
-								</Route>
-								<Route path="/sign-up">
-									<Signup />
 								</Route>
 
 								<Route path="*" element={<NotFound />} />
