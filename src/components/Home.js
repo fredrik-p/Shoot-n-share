@@ -22,7 +22,7 @@ const Home = () => {
                     />
                     <p>You are logged in as <strong>{currentUser.email}</strong></p>
 
-                    <Link to="/albums"><Button variant="dark" size='md'>Go ahead to your albums..</Button></Link>
+                    <Link to="/albums"><Button variant="dark" size='md'>Go to your albums</Button></Link>
                 </div>
             </Container>
         </Jumbotron>
