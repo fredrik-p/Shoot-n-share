@@ -14,26 +14,49 @@ const Navigation = () => {
 		<div>
 			<Navbar collapseOnSelect expand="sm" bg="transparent" variant="light">
 				<Container>
-					<Link to="/">
-						<Navbar.Brand>
-							<img
-								alt="logo"
-								src={logo}
-								width="30"
-								height="30"
-								className="d-inline-block align-top"
-							/>{' '}<h5>Shoot n' share</h5>
-						</Navbar.Brand>
-					</Link>
+					{
+						currentUser ? (
+							<>
+								<Link to="/home">
+									<Navbar.Brand>
+										<img
+											alt="logo"
+											src={logo}
+											width="30"
+											height="30"
+											className="d-inline-block align-top"
+										/>{' '}<h5>Shoot n' share</h5>
+									</Navbar.Brand>
+								</Link>
+
+							</>
+						) : (
+								<>
+									<Link to="/">
+										<Navbar.Brand>
+											<img
+												alt="logo"
+												src={logo}
+												width="30"
+												height="30"
+												className="d-inline-block align-top"
+											/>{' '}<h5>Shoot n' share</h5>
+										</Navbar.Brand>
+									</Link>
+								</>
+							)
+					}
 
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="ml-auto">
+
 							{
 								currentUser ? (
+									<>
+										<NavLink className="nav-link" to="/albums" className="nav-link">Albums</NavLink><NavLink className="nav-link" to="/login" onClick={handleLogout}><VscSignOut /></NavLink>
 
-									<NavLink to="/login" className="dropdown-item" onClick={handleLogout}><VscSignOut /></NavLink>
-
+									</>
 								) : (
 										<>
 											<NavLink to="/login" className="nav-link">Login</NavLink>
@@ -45,7 +68,7 @@ const Navigation = () => {
 					</Navbar.Collapse>
 				</Container>
 			</Navbar>
-		</div>
+		</div >
 	)
 }
 

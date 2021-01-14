@@ -1,6 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 import { auth } from '../firebase'
-import { BounceLoader } from 'react-spinners'
 
 const AuthContext = createContext()
 
@@ -18,10 +17,6 @@ const AuthProvider = (props) => {
 
     const logout = () => {
         return auth.signOut()
-    }
-
-    const resetPassword = (email) => {
-        return auth.sendPasswordResetEmail(email)
     }
 
     const signup = (email, password) => {
@@ -42,13 +37,12 @@ const AuthProvider = (props) => {
         loading,
         login,
         logout,
-        resetPassword,
         signup,
     }
 
     return (
         <AuthContext.Provider value={contextValues}>
-            {loading && (<div className="d-flex justify-content-center my-5"><BounceLoader color={"#888"} size={100} /></div>)}
+            {loading && (<p>Just a moment..</p>)}
             {!loading && props.children}
         </AuthContext.Provider>
     )

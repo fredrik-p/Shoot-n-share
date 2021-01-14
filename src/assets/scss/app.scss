@@ -57,6 +57,10 @@ h5 {
     line-height: 1;
     padding-bottom: 20px;
 }
+
+.album-header h3 {
+    text-align: center;
+}
   
 .custom-control-label {
     font-weight: 400;
@@ -79,7 +83,7 @@ h5 {
     padding: 0.25rem 1rem;
     text-align: right;
 }
-.dropdown-item:hover {
+.nav-link:hover {
     background-color: transparent;
     color: #167bff; 
 }
@@ -87,4 +91,21 @@ h5 {
 .dropdown-menu {
     border-style: none;
     background-color: transparent;
+}
+
+.card {
+background-color: rgba(255, 255, 255, 0.5);
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-title a {
+    color:#343a40;
+}
+
+.card-title a:hover { 
+    color: #080808;
+    text-decoration: none;
 }

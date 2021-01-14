@@ -6,8 +6,6 @@ const Home = () => {
 
     return (
         <div>
-            <p>This is my home component.</p>
-
             <p>You are logged in as <strong>{currentUser.email}</strong></p>
         </div>
     )

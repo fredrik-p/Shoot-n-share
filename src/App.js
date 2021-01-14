@@ -7,8 +7,12 @@ import Navigation from './components/Navigation'
 import Landing from './components/Landing'
 import Signup from './components/Signup'
 import Login from './components/Login'
-import Logout from './components/Logout'
 import Home from './components/Home'
+import NotFound from './components/NotFound'
+import Album from './components/albums/Album'
+import Albums from './components/albums/Albums'
+import CreateAlbum from './components/albums/CreateAlbum'
+import SimpleReactLightbox from 'simple-react-lightbox'
 import background from './assets/images/bg-home.jpg'
 import './assets/scss/app.scss'
 
@@ -24,28 +28,42 @@ const App = () => {
 				height: '100vh'
 			}}>
 				<AuthProvider>
-					<Navigation />
-					<Container>
+					<SimpleReactLightbox>
+						<Navigation />
+						<Container>
 
-						<Routes>
-							<Route path="/">
-								<Landing />
-							</Route>
-							<AuthRoute path="/home">
-								<Home />
-							</AuthRoute>
-							<Route path="/logout">
-								<Logout />
-							</Route>
-							<Route path="/login">
-								<Login />
-							</Route>
-							<Route path="/sign-up">
-								<Signup />
-							</Route>
-						</Routes>
+							<Routes>
+								<Route path="/">
+									<Landing />
+								</Route>
+								<AuthRoute path="/home">
+									<Home />
+								</AuthRoute>
+								<Route path="/albums">
+									<AuthRoute path="/">
+										<Albums />
+									</AuthRoute>
 
-					</Container>
+									<AuthRoute path="/create">
+										<CreateAlbum />
+									</AuthRoute>
+
+									<AuthRoute path="/:albumId">
+										<Album />
+									</AuthRoute>
+								</Route>
+								<Route path="/login">
+									<Login />
+								</Route>
+								<Route path="/sign-up">
+									<Signup />
+								</Route>
+
+								<Route path="*" element={<NotFound />} />
+							</Routes>
+
+						</Container>
+					</SimpleReactLightbox>
 				</AuthProvider>
 			</div>
 		</>
