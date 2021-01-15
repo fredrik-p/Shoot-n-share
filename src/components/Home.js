@@ -12,7 +12,7 @@ const Home = () => {
         <Jumbotron>
             <Container>
                 <div className="centering">
-                    <h1>Welcome fellow photographer!</h1>
+                    <h1>Welcome!</h1>
                     <img
                         alt="logo"
                         src={logobig}
