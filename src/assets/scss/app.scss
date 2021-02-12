@@ -71,6 +71,18 @@ h5 {
 .album-header h3 {
     text-align: center;
 }
+
+.album-header span:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.edit_album_title {
+    text-align: center;
+    display: block;
+    font-size: 10px;
+    
+}
   
 .custom-control-label {
     font-weight: 400;

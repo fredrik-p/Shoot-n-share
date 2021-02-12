@@ -46,7 +46,7 @@ const Login = () => {
 
                 <button disabled={loading} type="submit" className="btn btn-dark btn-lg btn-block">Log in</button>
                 <p className="forgot-password text-right">
-                    Dont't have an account? <Link to="/sign-up">Sign up</Link>
+                    Don't have an account? <Link to="/sign-up">Sign up</Link>
                 </p>
 
             </form>
