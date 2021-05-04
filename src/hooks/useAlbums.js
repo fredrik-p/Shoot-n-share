@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react'
 import { db } from '../firebase'
+import { useAuth } from '../contexts/AuthContext'
 
-const useAlbums = (userId) => {
+const useAlbums = () => {
     const [albums, setAlbums] = useState([])
+    const { currentUser } = useAuth()
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         // register a snapshot-listener on firestore for all available albums
         const unsubscribe = db.collection('albums').orderBy('title')
-            .where('owner', '==', userId)
+            .where('owner', '==', currentUser.uid)
             .onSnapshot(snapshot => {
                 setLoading(true)
                 const snapshotAlbums = []
@@ -25,7 +27,7 @@ const useAlbums = (userId) => {
             })
 
         return unsubscribe
-    }, [userId])
+    }, [currentUser.uid])
 
     return { albums, loading }
 }

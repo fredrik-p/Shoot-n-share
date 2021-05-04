@@ -33,15 +33,15 @@ const Navigation = () => {
 							{
 								currentUser ? (
 									<>
-										<NavLink className="nav-link" to="/albums" className="nav-link">Albums</NavLink>
+										<NavLink className="nav-link" to="/albums" >Albums</NavLink>
 										<NavLink className="nav-link" to="/" onClick={handleLogout}><VscSignOut /></NavLink>
 									</>
 								) : (
-										<>
-											<NavLink to="/login" className="nav-link">Login</NavLink>
-											<NavLink to="/sign-up" className="nav-link">Sign Up</NavLink>
-										</>
-									)
+									<>
+										<NavLink to="/login" className="nav-link">Login</NavLink>
+										<NavLink to="/sign-up" className="nav-link">Sign Up</NavLink>
+									</>
+								)
 							}
 						</Nav>
 					</Navbar.Collapse>

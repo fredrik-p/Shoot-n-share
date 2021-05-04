@@ -50,7 +50,7 @@ const UploadAlbumImage = ({ albumId }) => {
             {
                 isDragActive
                     ? isDragAccept ? <p>Time to let go!</p> : <p>That kind of file is not supported</p>
-                    : <p>Upload images by dropping them here..</p>
+                    : <p>Upload images by dropping them here or click to select</p>
             }
             {acceptedFiles && (
                 <div className="accepted-files mt-2">

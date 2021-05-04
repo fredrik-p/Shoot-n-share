@@ -157,7 +157,7 @@ background-color: rgba(255, 255, 255, 0.5);
 .delbtn {
     font-size: 1.25rem;
     padding: 0.25rem 4.5rem;
-    margin: 0 auto;
+    margin: 1rem auto;
     display: block;
 }
 
@@ -173,4 +173,13 @@ background-color: rgba(255, 255, 255, 0.5);
   
   .centering {
     text-align: center;
+  }
+
+  .create-link-btn {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+  }
+
+  .select {
+      font-size: 12px;
   }
