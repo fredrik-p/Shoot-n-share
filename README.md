@@ -1,4 +1,4 @@
-# This project is my final examination at Medieinstitutet and the app is called Shoot N' Share. 📸
+# This project was part of the course Javascript 2 at Medieinstitutet and the app is called Shoot N' Share. 📸
 
 **Live:** <https://shootnshare.herokuapp.com/>
 
