@@ -1,8 +1,19 @@
-# Getting Started with Create React App
+# This project is my final examination at Medieinstitutet and the app is called Shoot N' Share. 📸
+
+**Live:** <https://shootnshare.herokuapp.com/>
+
+## Brief
+Ni ska bygga en foto-review app för fotografer.
+
+Fotografer ska kunna ladda upp bilder till album och få en länk som de kan skicka till sin kund.
+
+Kunder ska när de går in på länken få en trevlig presentation av bilderna, kunna klicka på dem och ge dem 👍🏻 eller 👎🏻.
+
+När alla foton har fått ett betyg så ska de med 👍🏻 sparas i ett nytt album som tillhör fotografen.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
